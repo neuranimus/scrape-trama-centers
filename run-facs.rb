@@ -10,7 +10,7 @@ document = Nokogiri::HTML.parse(html)
 elms = document.css("#content_element_0_left_column_1_state option[value]:not([value=\"\"])")
 states = elms.map{|e| e.values[0]}
 
-CSV.open("#{Date.today.to_s}-centers.csv", "w") do |csv|
+CSV.open("#{Date.today.to_s}-facs-centers.csv", "w") do |csv|
 
   csv << ["name", "address", "state", "country", "adult_level", "pediatric_level"]
 
